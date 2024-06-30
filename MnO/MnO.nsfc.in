@@ -1,0 +1,44 @@
+&CONTROL
+  calculation = 'nscf'
+  prefix = 'MnO'
+  pseudo_dir = '/hpcfs/home/fisica/da.carranza/QE/MnO/pseudo/'
+  outdir = '/hpcfs/home/fisica/da.carranza/QE/MnO/tmp/'
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   0.01
+  ecutrho =   560
+  ecutwfc =   70
+  ibrav = 0
+  nat = 4
+  nosym = .false.
+  nspin = 2
+  ntyp = 3
+  occupations = 'tetrahedra'
+  smearing = 'mv'
+  starting_magnetization(1) =   0.5
+  starting_magnetization(2) =   -0.5
+  tot_magnetization = 0.0
+/
+&ELECTRONS
+  conv_thr =   1d-5
+  mixing_beta =   0.7
+/
+ATOMIC_SPECIES
+Mn1     54.938 mn_pbe_v1.5.uspp.F.UPF 
+Mn2     54.938 mn_pbe_v1.5.uspp.F.UPF
+O       15.9994 O.pbe-rrkjus.UPF
+ATOMIC_POSITIONS crystal
+Mn1   0.7716827500000000    0.0000000000000000    0.0000000000000000
+Mn2   0.2283172500000000    0.5000000000000000    0.5000000000000000 
+O     0.2637126900000000    0.5000000000000000    0.0000000000000000 
+O     0.7362873100000000    0.0000000000000000    0.5000000000000000  
+CELL_PARAMETERS angstrom
+   3.0965936557875788    0.0000000000000000    0.0000000000000002
+   0.0000000000000005    3.1546052865504883    0.0000000000000002
+   0.0000000000000000    0.0000000000000000    4.3970589100006130
+K_POINTS automatic
+6 6 6 0 0 0
+HUBBARD {ortho-atomic}
+ U Mn1-3d 3.9
+ U Mn2-3d 3.9

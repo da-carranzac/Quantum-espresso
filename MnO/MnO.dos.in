@@ -1,0 +1,7 @@
+&DOS
+prefix = 'MnO',
+outdir = '/hpcfs/home/fisica/da.carranza/QE/MnO/tmp/',
+fildos = 'MnO.dos',
+emin = -10.0,
+emax = 20.0,
+/
